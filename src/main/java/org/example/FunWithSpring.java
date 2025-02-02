@@ -14,4 +14,5 @@ public class FunWithSpring
         final var funRepo = new FunRepo();
         new FunService(funRepo);
     }
+
 }

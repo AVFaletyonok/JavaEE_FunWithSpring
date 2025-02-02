@@ -19,4 +19,5 @@ public class FunService {
         final String fact = list.get(new Random().nextInt(list.size()));
         return fact;
     }
+
 }

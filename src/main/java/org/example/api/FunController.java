@@ -17,4 +17,5 @@ public class FunController {
     public String getFun() {
         return funService.getRandomFact();
     }
+
 }
