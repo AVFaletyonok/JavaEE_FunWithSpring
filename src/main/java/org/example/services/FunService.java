@@ -1,7 +1,7 @@
 package org.example.services;
 
-import org.example.api.model.FunFactModel;
-import org.example.repo.FunRepo;
+import org.example.controllers.model.FunFactModel;
+import org.example.repositories.FunRepo;
 import org.springframework.stereotype.Service;
 
 import java.util.Random;

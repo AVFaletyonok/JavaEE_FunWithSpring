@@ -1,7 +1,11 @@
 package org.example;
 
+import io.micrometer.core.instrument.Gauge;
+import io.micrometer.core.instrument.binder.MeterBinder;
+import org.example.repositories.FunRepo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
@@ -13,4 +17,10 @@ public class FunApplication
         SpringApplication.run(FunApplication.class, args);
     }
 
+    @Bean
+    public MeterBinder meterBinder(FunRepo repo) {
+        return meterRegistry ->
+                Gauge.builder("bread.size", repo::getRecordsCount)
+                        .register(meterRegistry);
+    }
 }

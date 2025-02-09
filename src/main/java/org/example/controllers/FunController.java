@@ -1,6 +1,6 @@
-package org.example.api;
+package org.example.controllers;
 
-import org.example.api.model.FunFactModel;
+import org.example.controllers.model.FunFactModel;
 import org.example.services.FunService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
